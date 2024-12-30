@@ -63,3 +63,26 @@ ul li {
     align-items: center;
     gap: 10px;
 }
+
+
+/* About Me Section */
+#about-me {
+    background: #e9f7f9; /* Light blue for a professional feel */
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+#about-me h2 {
+    color: #007bff;
+    border-bottom: 2px solid #00aaff;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+#about-me p {
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 1rem;
+}

@@ -5,17 +5,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-size: 1rem;
+            color: #555;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            color: #000;
+            font-weight: bold;
+        }
+
+        #projects {
+            padding: 100px 20px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        #projects h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .project-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .project-card a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .project-card a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #fff;
+            border-top: 1px solid #ddd;
+            margin-top: 50px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 10px 0;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: #555;
+        }
+
+        .social-icons a:hover {
+            color: #000;
+        }
+    </style>
 </head>
 <body>
 <!-- Navigation Bar -->
 <header>
+    <div class="logo">Chandu Reddy</div>
     <nav>
-        <div class="logo">
-            <a href="index.html">[Your Name]</a>
-        </div>
         <ul>
-            <li><a href="index.html">About Me</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="projects.html" class="active">Projects</a></li>
             <li><a href="resume.html">Resume</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -25,19 +139,35 @@
 
 <!-- Projects Section -->
 <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-cards">
-        <div class="card">
-            <h3>Project 1</h3>
-            <p>Short description of the project goes here.</p>
-            <a href="https://github.com/yourproject" target="_blank">View on GitHub</a>
+    <h2>My Projects</h2>
+    <div class="project-container">
+        <div class="project-card">
+            <h3>Project 1: Fake Tweet Detection</h3>
+            <p>Using Python, CNN, and Django to classify tweets as fake or real.</p>
+            <a href="https://github.com/yourproject1" target="_blank">View on GitHub</a>
         </div>
-        <div class="card">
-            <h3>Project 2</h3>
-            <p>Short description of the project goes here.</p>
-            <a href="https://github.com/yourproject" target="_blank">View on GitHub</a>
+        <div class="project-card">
+            <h3>Project 2: Notes & Reminders App</h3>
+            <p>A Flutter-based app to manage notes and reminders efficiently.</p>
+            <a href="https://github.com/yourproject2" target="_blank">View on GitHub</a>
+        </div>
+        <div class="project-card">
+            <h3>Project 3: Data Pipeline Automation</h3>
+            <p>Automated ETL pipelines using Apache Airflow and Spark.</p>
+            <a href="https://github.com/yourproject3" target="_blank">View on GitHub</a>
         </div>
     </div>
 </section>
-</body>
-</html>
+
+<!-- Footer -->
+<footer>
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/chandu-reddy-72027723a/" target="_blank" aria-label="LinkedIn">
+            <img src="assets/linkedin-svgrepo-com.svg" alt="LinkedIn" style="width: 24px; height: 24px;">
+        </a>
+        <a href="https://github.com/ChanduPT/portfolio" target="_blank" aria-label="GitHub">
+            <img src="assets/github-svgrepo-com.svg" alt="GitHub" style="width: 24px; height: 24px;">
+        </a>
+    </div>
+</footer>
+

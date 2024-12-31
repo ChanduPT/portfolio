@@ -14,39 +14,45 @@ body {
 
 /* Header Styles */
 header {
-    background: #fff;
-    padding: 10px 20px;
-    border-bottom: 1px solid #ddd;
-}
-
-nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; /* Ensures the logo and navigation links are vertically aligned */
+    padding: 15px 50px; /* Adjusted padding for better alignment */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 
-nav .logo a {
+.logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #888;
-    text-decoration: none;
+    color: #333; /* Optional for better visibility */
+    text-transform: uppercase; /* Makes the logo text more prominent */
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 40px;
+    gap: 30px; /* Increased spacing between navigation links */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0; /* Removes any additional margin */
 }
 
 nav ul li a {
     text-decoration: none;
     font-size: 1rem;
-    color: #888;
+    color: #555;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover, nav ul li a.active {
-    color: #333;
+    color: #000;
     font-weight: bold;
 }
 
@@ -75,6 +81,7 @@ section {
     display: flex;
     gap: 20px;
     justify-content: center;
+    flex-wrap: wrap; /* Ensures cards wrap on smaller screens */
 }
 
 .card {
@@ -84,6 +91,12 @@ section {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     max-width: 300px;
     text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effects */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift the card slightly on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .card h3 {
@@ -103,15 +116,75 @@ section {
     display: inline-block;
 }
 
-/* Social Icons */
-.social-icons a {
-    margin: 0 10px;
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Section */
+#contact-footer h3 {
     font-size: 1.5rem;
-    color: #2c3e50;
-    transition: color 0.3s;
+    margin-bottom: 10px;
 }
 
-.social-icons a:hover {
-    color: #3498db;
+#contact-footer .email {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
 }
 
+#contact-footer .contact-button {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    margin-top: 50px;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 0;
+}
+
+footer .social-icons a img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+footer .social-icons a img:hover {
+    transform: scale(1.2);
+}
+
+/* Additional Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+    header {
+        padding: 15px 30px; /* Reduce padding on smaller screens */
+    }
+
+    nav ul {
+        gap: 20px; /* Reduce gap between links */
+    }
+
+    .project-cards {
+        flex-direction: column; /* Stack cards vertically on small screens */
+        align-items: center;
+    }
+
+    .card {
+        max-width: 90%; /* Ensure cards don't overflow on smaller screens */
+    }
+}

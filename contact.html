@@ -5,18 +5,167 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: #f8f9fa;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+        margin: 0;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        font-size: 1rem;
+        color: #555;
+        transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover, nav ul li a.active {
+        color: #000;
+        font-weight: bold;
+    }
+
+    #contact {
+        padding: 100px 20px;
+        text-align: center;
+        margin-top: 80px; /* Offset for fixed header */
+    }
+
+    #contact h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    .form-container {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .form-group input, .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .form-group textarea {
+        height: 120px;
+        resize: none;
+    }
+
+    .form-group button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .form-group button:hover {
+        background-color: #0056b3;
+    }
+
+    #contact-footer {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    #contact-footer h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    #contact-footer .email {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #000;
+    }
+
+    #contact-footer .contact-button {
+        margin-top: 20px;
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 1rem;
+        background-color: #333;
+        color: #fff;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px 0;
+        background-color: #fff;
+        border-top: 1px solid #ddd;
+    }
+
+    footer .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    footer .social-icons a img {
+        width: 24px;
+        height: 24px;
+        transition: transform 0.3s ease;
+    }
+
+    footer .social-icons a img:hover {
+        transform: scale(1.2);
+    }
+  </style>
 </head>
 <body>
 <!-- Navigation Bar -->
 <header>
+  <div class="logo">Chandu Reddy</div>
   <nav>
-    <div class="logo">
-      <a href="index.html">[Your Name]</a>
-    </div>
     <ul>
       <li><a href="index.html">About Me</a></li>
-      <li><a href="projects.html">Projects</a></li>
+      <li><a href="about.html">Projects</a></li>
       <li><a href="resume.html">Resume</a></li>
       <li><a href="contact.html" class="active">Contact</a></li>
     </ul>
@@ -25,12 +174,44 @@
 
 <!-- Contact Section -->
 <section id="contact">
-  <h2>Contact Me</h2>
-  <div class="social-icons">
-    <a href="mailto:yourname@example.com"><i class="fas fa-envelope"></i></a>
-    <a href="https://linkedin.com/in/yourname"><i class="fab fa-linkedin"></i></a>
-    <a href="https://github.com/yourusername"><i class="fab fa-github"></i></a>
+  <h2>Get in Touch!</h2>
+  <div class="form-container">
+    <form>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Your email" required>
+      </div>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Your name" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Write your message here..." required></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit">Send Email</button>
+      </div>
+    </form>
+  </div>
+
+  <div id="contact-footer">
+    <h3>👋 Get in touch at</h3>
+    <div class="email">cpotukanuma.com</div>
+    <a href="mailto:cpotukanuma.com" class="contact-button">Contact Me</a>
   </div>
 </section>
+
+<!-- Footer -->
+<footer>
+  <div class="social-icons">
+    <a href="https://www.linkedin.com/in/chandu-reddy-72027723a/" target="_blank">
+      <img src="assets/linkedin-svgrepo-com.svg" alt="LinkedIn">
+    </a>
+    <a href="https://github.com/ChanduPT/portfolio" target="_blank">
+      <img src="assets/github-svgrepo-com.svg" alt="GitHub">
+    </a>
+  </div>
+</footer>
 </body>
 </html>

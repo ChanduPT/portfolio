@@ -3,17 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-size: 1rem;
+            color: #555;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            color: #000;
+            font-weight: bold;
+        }
+
+        #hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #f8f9fa;
+            padding: 0 20px;
+        }
+
+        #hero h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        #hero p {
+            font-size: 1.5rem;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        #about-me {
+            padding: 100px 20px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        #about-me h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        #about-me p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        #contact-section {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #f8f9fa;
+        }
+
+        #contact-section h3 {
+            font-size: 1.5rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        #contact-section .email {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 20px;
+        }
+
+        #contact-section .contact-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #contact-section .contact-button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #fff;
+            border-top: 1px solid #ddd;
+            margin-top: 50px;
+        }
+
+        footer ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 10px 0 0;
+            padding: 0;
+        }
+
+        footer ul li a {
+            text-decoration: none;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        footer ul li a:hover {
+            color: #000;
+        }
+    </style>
 </head>
 <body>
 <!-- Navigation Bar -->
 <header>
+    <div class="logo">Chandu Reddy</div>
     <nav>
-        <div class="logo">
-            <a href="index.html">[Your Name]</a>
-        </div>
         <ul>
             <li><a href="index.html" class="active">About Me</a></li>
             <li><a href="projects.html">Projects</a></li>
@@ -23,12 +169,35 @@
     </nav>
 </header>
 
+<!-- Hero Section -->
+<section id="hero">
+    <h1>Hi, I'm Chandu Reddy</h1>
+    <p>I am a Data Engineer specializing in building scalable, data-driven solutions.</p>
+</section>
+
 <!-- About Me Section -->
 <section id="about-me">
-    <div class="container">
-        <h2>About Me</h2>
-        <p>Hi, I’m [Your Name], a dedicated professional passionate about all roles in the data field...</p>
-    </div>
+    <h2>About Me</h2>
+    <p>
+        I am a data engineer with expertise in designing and building scalable solutions, including ETL pipelines, APIs, and data transformation workflows. Passionate about leveraging data to drive meaningful insights and innovation.
+    </p>
 </section>
+
+<!-- Contact Section -->
+<section id="contact-section">
+    <h3>👋 Get in touch at</h3>
+    <div class="email">cpotukanuma@gmail.com</div>
+    <a href="mailto:cpotukanuma@gmail.com" class="contact-button">Contact Me</a>
+</section>
+
+<!-- Footer -->
+<footer>
+    <ul>
+        <li><a href="index.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</footer>
 </body>
 </html>

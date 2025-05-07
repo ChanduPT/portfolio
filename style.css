@@ -21,6 +21,7 @@ body {
   color: var(--text-color);
   background-color: var(--bg-color);
   line-height: 1.6;
+  padding: 0;
 }
 
 /* Header */
@@ -42,6 +43,27 @@ header {
   font-weight: 600;
   font-size: 1.5rem;
   color: var(--text-color);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: var(--card-text);
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: var(--accent-color);
+  font-weight: bold;
 }
 
 /* Hero Section */
@@ -111,6 +133,27 @@ header {
 .hero-btn.outline:hover {
   background-color: var(--accent-color);
   color: #fff;
+}
+
+/* About Me Section */
+#about-me {
+  padding: 100px 20px;
+  background-color: var(--bg-color);
+  text-align: center;
+}
+
+#about-me h2 {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+#about-me p {
+  font-size: 1.1rem;
+  color: var(--card-text);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
 }
 
 /* Skills Section */
@@ -243,3 +286,4 @@ footer ul li a:hover {
     align-items: center;
   }
 }
+

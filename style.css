@@ -43,6 +43,13 @@ header {
   color: var(--text-color);
 }
 
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
 nav ul {
   display: flex;
   list-style: none;

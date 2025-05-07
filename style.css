@@ -1,4 +1,4 @@
-/* Root variables */
+/* General Styles */
 :root {
   --bg-color: #ffffff;
   --text-color: #333333;
@@ -21,10 +21,9 @@ body {
   color: var(--text-color);
   background-color: var(--bg-color);
   line-height: 1.6;
-  padding: 0;
 }
 
-/* Header */
+/* Header Styles */
 header {
   display: flex;
   justify-content: space-between;
@@ -66,7 +65,7 @@ nav ul li a.active {
   font-weight: bold;
 }
 
-/* Hero Section */
+/* Hero Section Styles */
 #hero {
   padding-top: 100px;
   padding-bottom: 60px;
@@ -286,4 +285,3 @@ footer ul li a:hover {
     align-items: center;
   }
 }
-

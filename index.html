@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
+  <title>Chandu Reddy | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Navigation Bar -->
+  <!-- Header -->
   <header>
     <div class="logo">Chandu Reddy</div>
     <nav>
@@ -21,7 +21,7 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <button id="theme-toggle" class="dark-mode-toggle">🌙 Toggle Dark Mode</button>
+    <button id="theme-toggle" class="dark-mode-toggle">🌙</button>
   </header>
 
   <!-- Hero Section -->
@@ -37,7 +37,7 @@
     </div>
   </section>
 
-  <!-- About Me Section -->
+  <!-- About Me -->
   <section id="about-me">
     <h2>About Me</h2>
     <p>
@@ -45,7 +45,7 @@
     </p>
   </section>
 
-  <!-- Skills Section -->
+  <!-- Skills -->
   <section class="skills-section">
     <h2 class="section-title">Skills</h2>
     <div class="skills-grid">
@@ -59,7 +59,7 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Contact -->
   <section id="contact-section">
     <h3>👋 Get in touch at</h3>
     <div class="email">cpotukanuma@gmail.com</div>
@@ -76,13 +76,13 @@
     </ul>
   </footer>
 
+  <!-- Dark Mode Script -->
   <script>
     const toggle = document.getElementById('theme-toggle');
     toggle.addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
       localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
     });
-
     window.addEventListener('DOMContentLoaded', () => {
       if (localStorage.getItem('theme') === 'dark') {
         document.body.classList.add('dark-mode');

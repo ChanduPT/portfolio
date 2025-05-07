@@ -46,7 +46,6 @@ header {
 nav ul {
   display: flex;
   list-style: none;
-  gap: 0px;
   margin: 0;
   padding: 0;
   align-items: center;

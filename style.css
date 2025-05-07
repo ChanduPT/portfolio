@@ -188,3 +188,12 @@ footer .social-icons a img:hover {
         max-width: 90%; /* Ensure cards don't overflow on smaller screens */
     }
 }
+
+
+/* Skill Section Icons */
+.skill-icon {
+    font-size: 30px;
+    color: #007bff;
+    margin-bottom: 10px;
+    display: block;
+}

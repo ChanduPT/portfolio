@@ -89,7 +89,7 @@ nav ul li a.active {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--accent-color);
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 #hero h1 {

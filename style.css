@@ -27,22 +27,19 @@ body {
 header {
   display: flex;
   justify-content: space-between; /* Keeps logo and nav on opposite sides */
-  align-items: flex-start;
+  align-items: center;
   padding: 20px 40px;
   background-color: var(--card-bg);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  position: sticky;
-  top: 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: fixed;
   z-index: 1000;
-  gap: 30px; /* Adjusted gap for better spacing */
+  box-sizing: border-box;
 }
 
 .logo {
-  font-weight: 600;
+  font-weight: bold;
   font-size: 1.5rem;
   color: var(--text-color);
-  margin-right: 40px; /* Space between logo and nav */
-  padding: 5px 0;
 }
 
 nav ul {
@@ -72,12 +69,9 @@ nav ul li a.active {
   background: transparent;
   border: 1px solid var(--text-color);
   color: var(--text-color);
-  border-radius: 5px;
   cursor: pointer;
   font-size: 0.9rem;
   transition: all 0.3s ease;
-  margin-left:20px;
-  height: 30px;
 }
 
 /* Hero Section Styles */

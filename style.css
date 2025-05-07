@@ -1,4 +1,4 @@
-\:root {
+:root {
   --bg-color: #ffffff;
   --text-color: #333333;
   --card-bg: #ffffff;
@@ -33,6 +33,8 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .logo {
@@ -71,25 +73,15 @@ nav ul li a.active {
   cursor: pointer;
   font-size: 0.9rem;
   transition: all 0.3s ease;
-  margin-left: 20px;
-}
-
-.dark-mode-toggle:hover {
-  background-color: var(--accent-color);
-  color: #fff;
 }
 
 /* Hero Section */
 #hero {
-  height: 90vh;
+  padding-top: 100px;
+  padding-bottom: 60px;
+  min-height: 90vh;
   background-color: var(--bg-color);
-  color: var(--text-color);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   text-align: center;
-  padding: 0 20px;
 }
 
 .hero-image {
@@ -120,6 +112,7 @@ nav ul li a.active {
 
 .hero-buttons {
   display: flex;
+  justify-content: center;
   gap: 15px;
   margin-top: 30px;
 }
@@ -198,7 +191,7 @@ nav ul li a.active {
   color: var(--card-text);
 }
 
-/* Contact & Footer */
+/* Contact Section */
 #contact-section {
   padding: 60px 20px;
   background-color: var(--card-bg);
@@ -232,6 +225,7 @@ nav ul li a.active {
   background-color: var(--accent-color);
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 30px 0;
@@ -258,14 +252,21 @@ footer ul li a:hover {
   color: var(--accent-color);
 }
 
+/* Responsive Fixes */
 @media (max-width: 768px) {
-  #hero h1 {
-    font-size: 2rem;
-  }
-
   .hero-image {
     width: 120px;
     height: 120px;
+  }
+
+  #hero h1 {
+    font-size: 2.2rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 
   .skills-grid {

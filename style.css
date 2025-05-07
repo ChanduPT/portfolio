@@ -26,7 +26,7 @@ body {
 /* Header Styles */
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Keeps logo and nav on opposite sides */
   align-items: center;
   padding: 20px 40px;
   background-color: var(--card-bg);
@@ -34,7 +34,6 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  flex-wrap: wrap;
   gap: 20px;
 }
 
@@ -42,7 +41,6 @@ header {
   font-weight: 600;
   font-size: 1.5rem;
   color: var(--text-color);
-  margin-right: 40px; /* Space between logo and nav */
 }
 
 nav ul {
@@ -51,6 +49,7 @@ nav ul {
   gap: 25px;
   margin: 0;
   padding: 0;
+  align-items: center;
 }
 
 nav ul li a {
@@ -79,7 +78,7 @@ nav ul li a.active {
 
 /* Hero Section Styles */
 #hero {
-  padding-top: 100px;
+  padding-top: 60px; /* Reduced gap */
   padding-bottom: 60px;
   min-height: 90vh;
   background-color: var(--bg-color);
@@ -148,7 +147,7 @@ nav ul li a.active {
 
 /* About Me Section */
 #about-me {
-  padding: 80px 20px;  /* Decreased padding for better spacing */
+  padding: 80px 20px;
   background-color: var(--bg-color);
   text-align: center;
 }

@@ -75,6 +75,7 @@ nav ul li a.active {
   cursor: pointer;
   font-size: 0.9rem;
   transition: all 0.3s ease;
+  margin-left:20px;
 }
 
 /* Hero Section Styles */
